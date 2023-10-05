@@ -1,0 +1,22 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="https://em-content.zobj.net/source/apple/354/victory-hand_270c-fe0f.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-neutral-900 w-full min-h-screen grid place-items-center">
+		<slot />
+	</body>
+</html>
