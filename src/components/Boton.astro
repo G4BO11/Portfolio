@@ -1,16 +1,33 @@
 ---
 import iconSquareLink from '../assets/squareLink.svg'
+
 interface Props {
+	id? : string;
 	icon? : string;
 	linkaso? : string;
 	margin? : string;
 	name? : string;
 	rotate? : string;
 	translate? : string;
+	blank? : boolean;
 }
-const { icon, margin, name, rotate, translate, linkaso} = Astro.props;
+const { icon, id, margin, name, rotate, translate, linkaso, blank} = Astro.props;
+
+const target = blank ? "_blank" : "";
 ---
-<div class="group flex flex-col items-center gap-y-4 shrink-0">
-	<a class={`grid place-items-center w-20 h-20 bg-zinc-800 rounded-2xl ${rotate} ${margin} cursor-pointer hover:border-4 hover:bg-zinc-700 transition-all duration-100 ease-in`} href={linkaso} target="_blank"><img src={icon} alt="icono" class="text-white"/></a>
-	<p class={`opacity-0 bg-white text-zinc-800 px-4 py-1 rounded-2xl ${rotate} ${translate} text-sm w-full text-center flex transition-opacity duration-300 ease group-hover:opacity-100 mb-2`}>{name} <img  class="ml-1" src={iconSquareLink.src} alt="icono" /></p>
+<div class="flex flex-col items-center gap-y-4 shrink-0">
+	<a 
+		id={id}
+		class={`grid place-items-center w-20 h-20 bg-[#272C38] rounded-2xl ${rotate} ${margin} cursor-pointer hover:border-4 hover:bg-zinc-700 transition-all duration-100 ease-in`} href={linkaso}
+		target={target}
+	>		
+		<img src={icon} alt="icono" class="text-white">
+	</a>
+	<p class={`opacity-0 bg-white text-zinc-800 px-4 py-1 rounded-2xl ${rotate} ${translate} text-sm w-full text-center flex transition-opacity duration-300 ease mb-2`}>{name} <img  class="ml-1" src={iconSquareLink.src} alt="icono" /></p>
 </div>
+
+<style>
+	a:hover+p{
+		opacity: 1;
+	}
+</style>

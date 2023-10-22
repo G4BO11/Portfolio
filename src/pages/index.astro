@@ -6,13 +6,12 @@ import iconClip from '../assets/resume.svg';
 import iconProjects from '../assets/Briefcase.svg';
 import iconLinkedin from '../assets/linkedin.svg';
 import iconMensaje from'../assets/message.svg';
-import '../global.css';
 ---
 
-<Layout title="Gabriel Gutierrez - Portfolio">
-	<main class=" w-full flex justify-center">
-		<section class="w-[65%] flex flex-col gap-y-12 items-center">
-			<h1 class="text-white text-5xl text-center font-sans font-medium max-w-[1010px] lg:text-[80px] leading-tight">Gabriel es Desarrollador en Bogotá, Colombia</h1>
+<Layout title="Gabriel Gutierrez - Portfolio"  style="relative bg-[#12141B] w-full min-h-screen grid place-items-center overflow-hidden">
+	<main class=" w-full flex justify-center" transition:animate="slide">
+		<section class="w-[65%] flex flex-col items-center py-5">
+			<h1 class="text-white text-5xl text-center font-sans font-medium max-w-[1000px] mb-6 lg:text-[80px] leading-tight select-none">Gabriel es Desarrollador en Bogotá, Colombia</h1>
 			<section class="flex justify-center flex-wrap">
 				<Boton 
 					name="GitHub" 
@@ -20,6 +19,7 @@ import '../global.css';
 					margin="md:mt-4" rotate="md:-rotate-6" 
 					translate="md:translate-x-2" 
 					icon={iconGit.src}
+					blank
 				/>
 				<Boton 
 					name="Resume" 
@@ -28,8 +28,11 @@ import '../global.css';
 					rotate="md:-rotate-3" 
 					translate="md:translate-x-1" 
 					icon={iconClip.src}
+					blank
 				/>
 				<Boton 
+					id="btnMover"
+					linkaso='/proyectos'
 					name="Projects" 
 					icon={iconProjects.src}
 				/>
@@ -40,6 +43,7 @@ import '../global.css';
 					rotate="md:rotate-3" 
 					translate="md:-translate-x-1" 
 					icon={iconLinkedin.src}
+					blank
 				/>
 				<Boton 
 					name="Contact" 
@@ -48,14 +52,17 @@ import '../global.css';
 					rotate="md:rotate-6" 
 					translate="md:-translate-x-2" 
 					icon={iconMensaje.src}
+					blank
 				/>
 			</section>
 			<div class="flex flex-col gap-y-4 shrink-0 items-center">
-				<p class="text-white font-sans text-base border-2 py-1 px-4 rounded-3xl text-center">Actualmente</p>
+				<p class="text-white font-sans text-base border-2 py-1 px-4 rounded-3xl text-center select-none">Actualmente</p>
 				<p class=" hidden text-white font-sans text-lg">Web Developer en <a class="font-semibold hover:underline decoration-1" href="https://www.logotexo.com/es/" target="_blank">Logo Texo</a></p>
-				<p class="text-white font-sans font-bold text-3xl">Freelance</p>
+				<p class="text-white font-sans font-bold text-3xl select-none">Freelance</p>
 			</div>
 		</section>
 	</main>
 </Layout>
+<style>
 
+</style>

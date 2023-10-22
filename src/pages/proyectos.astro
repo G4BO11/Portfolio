@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import IMG_PROYECTO from "../../public/imgProyectWebApp.png"
+import IMG_PROYECTO_2 from "../../public/imgProyectAPIApp.png"
+import IMG_PROYECTO_BUFEB from "../../public/imgBufeb.png"
+import CardProyectos from "../components/CardProyectos.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Proyectos" style="bg-[#12141B] grid p-9 font-sans relative flex">
+    <section class="grid gap-y-6">
+        <h1 class="text-white text-4xl text-center font-semibold mt-1 md:text-start">Proyectos</h1>
+        <div class="grid gap-6 md: lg:pl-4 lg:flex lg:flex-row ">
+            <CardProyectos titulo="Bufeb" source={IMG_PROYECTO_BUFEB.src}/>
+        </div>
+    </section>
+    <section class="grid gap-y-6 h-auto">
+        <h2 class="text-white text-3xl text-center font-semibold mt-7 md:text-start">Mini - Proyectos</h2>
+        <div class="grid gap-6 md: lg:pl-4 lg:flex lg:flex-row lg:h-auto lg:flex-wrap">
+            <CardProyectos mini titulo="Web App .NET" source={IMG_PROYECTO.src}/>
+            <CardProyectos mini titulo="Web API .NET" source={IMG_PROYECTO_2.src}/>
+        </div>
+    </section>
+    <a  class="cursor-pointer bg-gray-800 w-auto p-3 mt-9 inline-flex rounded-lg justify-center relative font-sans text-white text-xl md:-order-1 md:mt-0 md:mb-5 lg:w-fit lg:items-center lg:gap-x-2" href="/ "> 
+        <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke-width="2" 
+            stroke="currentColor" 
+            class="w-6 h-6 text-white absolute left-3 lg:static"
+        >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+        Regresar
+    </a>
+</Layout>

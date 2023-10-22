@@ -1,0 +1,11 @@
+---
+interface Props {
+	style : string;
+}
+
+const { style } = Astro.props;
+---
+
+<article class=`absolute inset-0 ${style}`>
+    <slot/>
+</article>
