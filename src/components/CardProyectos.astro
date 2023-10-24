@@ -14,8 +14,8 @@ const { mini, titulo, source} = Astro.props;
                  lg:max-w-[430px] lg:items-start lg:justify-start lg:gap-0
                 `,
         {
-            "h-[340px] group no-mini lg:flex-col lg:gap-4": !mini,
-            "h-[300px]": mini
+            "md:h-[340px] group no-mini lg:flex-col lg:gap-4": !mini,
+            "md:h-[300px]": mini
         }
     ]}>
     <h3 class="text-white font-sans text-2xl font-bold md:text-4xl lg:text-3xl flex group-[.no-mini]:lg:self-center">{titulo}</h3>

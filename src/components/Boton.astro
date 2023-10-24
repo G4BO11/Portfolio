@@ -15,15 +15,16 @@ const { icon, id, margin, name, rotate, translate, linkaso, blank} = Astro.props
 
 const target = blank ? "_blank" : "";
 ---
-<div class="flex flex-col items-center gap-y-4 shrink-0">
+<div class="flex flex-col items-center gap-y-4 shrink-0 last:col-span-2">
 	<a 
 		id={id}
-		class={`grid place-items-center w-20 h-20 bg-[#272C38] rounded-2xl ${rotate} ${margin} cursor-pointer hover:border-4 hover:bg-zinc-700 transition-all duration-100 ease-in`} href={linkaso}
+		class={`grid place-items-center w-20 h-20 bg-[#272C38] rounded-2xl ${rotate} ${margin} cursor-pointer hover:border-4 hover:bg-zinc-700 transition-all duration-100 ease-in select-none`} href={linkaso}
 		target={target}
 	>		
 		<img src={icon} alt="icono" class="text-white">
 	</a>
-	<p class={`opacity-0 bg-white text-zinc-800 px-4 py-1 rounded-2xl ${rotate} ${translate} text-sm w-full text-center flex transition-opacity duration-300 ease mb-2`}>{name} <img  class="ml-1" src={iconSquareLink.src} alt="icono" /></p>
+	<!-- <p class={`opacity-0 bg-white hidden text-zinc-800 px-4 py-1 rounded-2xl ${rotate} ${translate} text-sm w-full text-center transition-opacity duration-300 ease mb-2 md:flex`}>{name} <img  class="ml-1" src={iconSquareLink.src} alt="icono" /></p> -->
+	<p class={`opacity-0 bg-white hidden text-zinc-800 px-4 py-1 rounded-2xl ${rotate} ${translate} text-sm w-full text-center transition-opacity duration-300 ease mb-2 md:flex`}>{name} <img  class="ml-1" src={iconSquareLink.src} alt="icono" /></p>
 </div>
 
 <style>

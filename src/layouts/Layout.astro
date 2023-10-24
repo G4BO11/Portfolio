@@ -25,4 +25,18 @@ const { title, style } = Astro.props;
 </html>
 <style is:global>
 	@import url(https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+	::-webkit-scrollbar {
+		width: 5px; 
+	}
+
+	::-webkit-scrollbar-track {
+		background: #12141B
+	}
+
+	::-webkit-scrollbar-thumb {
+		margin-right: 5px;
+		border-radius: 5px;
+		background: rgba(255, 255, 255, 0.5);
+	}
 </style>
