@@ -1,0 +1,152 @@
+---
+const Imagen = [
+    {
+        alt: '',
+        source: ''
+    }
+]
+---
+<div class="swiper h-full md:py-8 relative">
+    <div class="swiper-wrapper select-none">
+        <div class="swiper-slide relative grid place-content-center max-w-md md:rounded md:min-h-[250px] lg:min-h-[300px] lg:max-w-lg">
+            <img class="absolute w-full h-full md:rounded-xl object-cover [@media(min-width:510px)]:rounded-lg" src="/public/img/Inicio.webp" alt="Imagen Bufeb">
+        </div>
+        <div class="swiper-slide relative grid place-content-center max-w-md md:rounded md:min-h-[250px] lg:min-h-[300px] lg:max-w-lg">
+            <img class="absolute w-full h-full md:rounded-xl object-cover [@media(min-width:510px)]:rounded-lg" src="/public/img/LandingPage.webp" alt="Imagen Bufeb">
+        </div>
+        <div class="swiper-slide relative grid place-content-center max-w-md md:rounded md:min-h-[250px] lg:min-h-[300px] lg:max-w-lg">
+            <img class="absolute w-full h-full md:rounded-xl object-cover [@media(min-width:510px)]:rounded-lg" src="/public/img/CrearCuenta.webp" alt="Imagen Bufeb">
+        </div>
+    </div>
+</div>
+<div class="absolute w-full h-full flex top-0 left-0 right-0 controlador">
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+<div class="swiper-pagination w-4 flex justify-center -bottom-5"></div>
+
+
+<style is:inline>
+    span.swiper-pagination-bullet{
+        background-color: rgb(230, 230, 230);
+        opacity: 1;
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+    span.swiper-pagination-bullet-active{
+        background-color: white;
+        width: 0.53rem;
+        height: 0.53rem;
+    }
+    *{
+        --swiper-navigation-size: 30px;
+        --swiper-navigation-top-offset: 0;
+        --swiper-navigation-sides-offset: 0;
+        --swiper-navigation-color: white;
+    }
+    @media (min-width: 768px) and (max-width:1024px)
+    {
+        *{
+            --swiper-navigation-size: 35px;
+            --swiper-navigation-top-offset: 0;
+            --swiper-navigation-sides-offset: 0;
+            --swiper-navigation-color: white;
+        }
+        .swiper-button-next,
+        .swiper-button-prev
+        {
+            font-weight: 600;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: 5px;
+        }
+    }
+    @media (min-width: 768px){
+        
+        *{
+            --swiper-navigation-color:rgb(44, 62, 131);
+        }
+        span.swiper-pagination-bullet
+        {
+            background-color: rgb(164, 175, 220);
+            opacity: 1;
+            width: 0.51rem;
+            height: 0.51rem;
+        }
+        span.swiper-pagination-bullet-active
+        {
+            background-color: rgb(124, 137, 190);
+            width: 0.58rem;
+            height: 0.58rem;
+        }
+    }
+    @media (min-width:1204px){
+        *{
+            --swiper-navigation-size: 40px;
+            --swiper-navigation-top-offset: 0;
+            --swiper-navigation-sides-offset: 0;
+            --swiper-navigation-color:rgb(44, 62, 131);
+        }
+        .swiper-button-next,
+        .swiper-button-prev
+        {
+            font-weight: 600;
+        }
+        .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+            bottom: -2px;
+        }
+    }
+</style>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>
+    new Swiper('.swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        pagination : {
+            el : '.swiper-pagination',
+            // dynamicBullets: true
+        },
+        navigation : {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2,
+            slideShadows: false,
+        },
+        breakpoints: {            
+            640: {
+                slidesPerView: 'auto',
+                coverflowEffect:{
+                    stretch: -10
+                }
+            },              
+            786: {
+                slidesPerView: 'auto',
+                coverflowEffect:{
+                    stretch: -13
+                }
+            },
+            1024: {
+                slidesPerView: 'auto',
+                coverflowEffect:{
+                    stretch: -15
+                }
+            },
+            1280: {
+                slidesPerView: 'auto',
+                coverflowEffect:{
+                    stretch: -20
+                }
+            },
+        }
+    })
+
+</script>

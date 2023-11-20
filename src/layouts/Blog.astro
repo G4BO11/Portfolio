@@ -1,0 +1,73 @@
+---
+import Tag from '../components/Tag.astro'
+import Slider from '../components/Slider.astro'
+
+interface Props{
+	title :string
+	descripcion : string
+}
+const {title, descripcion} = Astro.props
+---
+
+<section class="flex w-full flex-col items-center lg:justify-center">
+	<div class="flex flex-col w-full items-center lg:max-w-[986px] xl:max-w-[1200px]">
+		<nav class="hidden w-full bg-slate-200 min-h-[20px] lg:block"></nav>
+		<section class="flex flex-col gap-y-5 pb-5 px-8 pt-8 md:px-20 md:pt-16">
+			<h1 class="text-4xl font-bold">
+				{title}
+			</h1>
+			<article class="flex flex-col gap-x-5 gap-y-3 [@media(min-width:510px)]:flex-row">
+				<label class="text-sm font-semibold md:text-base">Descripcion:</label>
+				<p class="text-sm pl-2 md:text-base">
+					{descripcion}
+				</p>
+			</article>
+			<article class="flex flex-col gap-x-5 gap-y-3 [@media(min-width:510px)]:flex-row">
+				<label class="text-sm font-semibold md:text-base">Tecnologías:</label>
+				<div class="flex flex-wrap gap-2 pl-2">
+					<Tag nameTag="PHP" colorFondo='bg-violet-50' colorborde='border-violet-400' colorTexto='text-violet-400'/>
+					<Tag nameTag="HTML" colorFondo='bg-orange-50' colorborde='border-orange-400' colorTexto='text-orange-400'/>
+					<Tag nameTag="CSS" colorFondo='bg-blue-50' colorborde='border-blue-400' colorTexto='text-blue-400'/>
+					<Tag nameTag="JavaScript" colorFondo='bg-yellow-50' colorborde='border-yellow-400' colorTexto='text-yellow-400'/>
+					<Tag nameTag="MySql" colorFondo='bg-gradient-to-r from-blue-50 from-50% to-orange-50 to-50%' colorborde='border-blue-300' colorTexto='text-blue-300'/>
+					<Tag nameTag="Composer" colorFondo='bg-stone-100' colorborde='border-stone-400' colorTexto='text-stone-400'/>
+				</div>
+			</article>	
+		</section>
+
+		<section class="h-64 min-h-[260px] pt-4 md:max-h-[320px] md:h-auto lg:max-h-none w-full lg:px-12">
+			<div class="h-full w-full relative md:p-0">
+				<Slider/>
+			</div>
+		</section>
+
+		<div class="w-full md:px-20">
+			<p class="text-sm px-7 py-8 md:text-base">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae eum itaque ipsa, quisquam fuga sequi doloribus quibusdam eaque aliquam, minus illum iste harum tempore nobis maxime? Enim possimus dolores non fugit itaque aliquam et laboriosam aut blanditiis eum, nulla neque voluptatem at necessitatibus quaerat vel laudantium? Sunt sequi natus recusandae.
+			</p>
+			<section class="w-full flex justify-center">
+				<img class="w-full min-h-[13rem] md:rounded-lg md:max-w-[630px] lg:max-w-[800px] lg:max-h-[400px]" src="/public/img/fondo.png" alt="img de tal pascual">
+			</section>
+			<p class="text-sm px-7 py-8 md:text-base">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem optio eaque nihil nam, assumenda rem laudantium at ex, vero illum aliquid! Repudiandae dolor, deleniti illo pariatur obcaecati saepe modi tenetur sit. Veritatis dolor officiis voluptatem possimus perferendis voluptate velit repellat excepturi alias, nisi commodi id magnam quod animi in inventore?
+			</p>
+			<section class="grid grid-cols-4 px-5 gap-3 w-full md:grid-cols-3">
+				<div class="col-span-2 row-span-5 min-h-[16rem] h-2 md:col-span-1 md:row-span-1 md:min-h-[300px] lg:min-h-[400px]">
+					<img class="w-full h-full rounded-lg" src="/public/img/fondo.png" alt="">
+				</div>
+				<div class="col-span-2 row-span-4 md:col-span-1 md:row-span-1 md:min-h-[300px] lg:min-h-[400px]">
+					<img class="w-full h-full rounded-lg" src="/public/img/fondo.png" alt="">
+				</div>
+				<div class="col-span-2 md:col-span-1  md:min-h-[300px] lg:min-h-[400px]">
+					<img class="w-full h-full rounded-lg" src="/public/img/fondo.png" alt="">
+				</div>
+			</section>
+			<p class="text-sm px-7 py-8 md:text-base">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem optio eaque nihil nam, assumenda rem laudantium at ex, vero illum aliquid! Repudiandae dolor, deleniti illo pariatur obcaecati saepe modi tenetur sit.
+			</p>
+		</div>	
+		<section>
+			<slot />
+		</section>
+	</div>
+</section>

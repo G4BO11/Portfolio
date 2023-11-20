@@ -1,0 +1,15 @@
+---
+interface Props {
+    nameTag? : string
+    colorFondo: string
+    colorTexto? : string
+    colorborde? : string
+}
+
+
+const { nameTag, colorFondo, colorTexto, colorborde } =Astro.props
+---
+
+<div class=`w-fit h-6 ${colorFondo} flex gap-x-2 px-4 rounded-full items-center justify-center border ${colorborde}`>
+    <p class=`${colorTexto} font-medium text-sm`>{nameTag}</p>
+</div>
