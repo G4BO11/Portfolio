@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.7.0",
     "prettier-plugin-astro": "^0.12.1",
     "swiper": "^11.0.3",
