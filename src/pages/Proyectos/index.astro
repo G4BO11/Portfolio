@@ -1,27 +1,13 @@
 ---
-import { Image } from "astro:assets";
-import IMG_PROYECTO from "/public/img/imgProyectWebApp.webp"
-import IMG_PROYECTO_2 from "/public/img/imgProyectAPIApp.webp"
-import IMG_PROYECTO_BUFEB from "/public/img/imgBufeb.webp"
-import CardProyectos from "../../components/CardProyectos.astro";
-import Layout from "../../layouts/Layout.astro";
-
+    import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title="Proyectos" style="bg-[#12141B] grid p-9 font-sans relative flex">
-    <section class="grid gap-y-6">
-        <h1 class="text-white text-3xl text-center font-semibold mt-1 md:text-start">Proyectos</h1>
-        <div class="grid gap-6 md: lg:pl-4 lg:flex lg:flex-row ">
-            <CardProyectos titulo="Bufeb" source={IMG_PROYECTO_BUFEB.src} linkaso="./Bufeb"/>
-        </div>
+<Layout title="Proyectos" style="bg-[#12141B] flex flex-col p-9 font-sans relative flex h-screen">
+    <section class="flex flex-col gap-y-4 text-white w-full h-full items-center justify-center">
+        <h1 class="font-extrabold text-6xl md:text-7xl tracking-tight">Uupss...</h1>
+        <p class="max-w-sm lg:max-w-xl md:text-xl">¡Lo siento😔! Por el momento esta en mantenimiento esta sección. Estoy trabajando para que este disponible muy pronto.</p>
     </section>
-    <section class="grid gap-y-6 h-auto">
-        <h2 class="text-white text-2xl text-center font-semibold mt-7 md:text-start">Mini - Proyectos</h2>
-        <div class="grid gap-6 md: lg:pl-4 lg:flex lg:flex-row lg:h-auto lg:flex-wrap">
-            <CardProyectos mini titulo="Web App .NET" source={IMG_PROYECTO.src}/>
-            <CardProyectos mini titulo="Web API .NET" source={IMG_PROYECTO_2.src} />
-        </div>
-    </section>
+    <!-- Boton Regresar -->
     <a  class="cursor-pointer bg-gray-800 w-auto p-2 mt-9 inline-flex rounded-lg justify-center relative font-sans text-white text-base md:-order-1 md:mt-0 md:mb-5 lg:w-fit lg:text-sm lg:items-center lg:gap-x-2 2xl:text-xl 2xl:px-4" href="../"> 
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
