@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Boton from '../components/Boton.astro';
-import iconGit from'/public/icons/github.svg';
-import iconClip from '/public/icons/resume.svg';
-import iconProjects from '/public/icons/Briefcase.svg';
-import iconLinkedin from '/public/icons/linkedin.svg';
-import iconMensaje from'/public/icons/message.svg';
+import Layout from '@layouts/Layout.astro';
+import Boton from '@components/Boton.astro';
+import iconGit from'@icons/github.svg';
+import iconClip from '@icons/resume.svg';
+import iconProjects from '@icons/Briefcase.svg';
+import iconLinkedin from '@icons/linkedin.svg';
+import iconMensaje from'@icons/message.svg';
 ---
 
 <Layout title="Gabriel Gutierrez - Portfolio"  style="relative bg-[#12141B] w-full min-h-screen grid place-items-center">
@@ -56,9 +56,8 @@ import iconMensaje from'/public/icons/message.svg';
 				/>
 			</section>
 			<div class="flex flex-col gap-y-2 items-center">
-				<p class="text-white font-sans text-xs border-2 px-2 py-1 mt-4 rounded-3xl text-center select-none md:mt-0 2xl:text-base 2xl:px-3">Actualmente</p>
-				<!-- <p class=" hidden text-white font-sans text-lg">Web Developer en <a class="font-semibold hover:underline decoration-1" href="https://www.logotexo.com/es/" target="_blank">Logo Texo</a></p> -->
-				<p class="text-white font-sans font-bold text-2xl select-none 2xl:text-3xl">Freelance</p>
+				<p class="text-white font-sans text-xs border-2 px-2 py-1 mt-4 rounded-3xl text-center select-none md:mt-0 2xl:text-sm 2xl:px-2.5">Actualmente</p>
+				<p class="text-white font-sans text-xl xl:mt-1">Estudiante en la <a class="font-semibold hover:underline decoration-1" href="https://umb.edu.co/" target="_blank">Universidad Manuela Beltran</a></p>
 			</div>
 		</section>
 	</main>
